@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="icon" href="./image/Logo1.png" type="image/png">
+    <title>Job Passcard | Mychat</title>
+  </head>
+  <body>
+    <header>
+      <div><img class="logo" src="./image/Logo.png" alt="logo" /></div>
+      <nav>
+        <div class="d00">
+          <button class="styled-button">ABOUT US</button>
+          <button class="styled-button">PASSCODE</button>
+          <button class="styled-button">PROFILE</button>
+        </div>
+      </nav>
+      <div class="d1">
+        <div class="d01">
+          <div class="nsall">
+            <div class="dns"><img class="ns1" src="image/s1.png" alt="" /></div>
+            <div><img class="ns2" src="image/s2.png" alt="" /></div>
+            <div class="warning"></div>
+            <div class="pa">1</div>
+          </div>
+          <button class="styled-button">LOGIN</button>
+          <div class="line-break"></div>
+          <button class="styled-button">SIGN UP</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="topic">
+        <h1>MyCart</h1>
+      </div>
+      <div class="container">
+        <div class="dm1">
+          <img class="m1" src="image/t2.png" alt="" />
+        </div>
+        <div>
+          <div class="gimg01"><img class="dvimg" src="image/dg.png" alt="Doce" /></div>
+          <div class="textcon">
+            <h4>Google Docs</h4>
+            <p>Used for business</p>
+          </div>
+          <div class="text01">
+            <h2>Google Docs</h2>
+            <div class="op">
+              <select id="circleSelect" onchange="drawCircles()">
+                <option value="1">LV 1-3</option>
+                <option value="2">LV 2-3</option>
+                <option value="3">LV 3-3</option>
+              </select>
+            </div>
+            <div id="circleContainer">
+              <div class="circle01"></div>
+              <div class="circle01"></div>
+              <div class="circle01"></div>
+            </div>
+            <!-- select1 -->
+            <div class="thb"><p>THB 0</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container01">
+        <div>
+          <div class="dm1">
+            <img class="m1" src="image/t2.png" alt="" />
+          </div>
+          <div class="gimg02">
+            <img class="dvimg01" src="image/sd.png" alt="slide" />
+          </div>
+          <div class="textcon">
+            <h4>Google Slides</h4>
+            <p>Used for business</p>
+
+          </div>
+          <div class="text01">
+            <h2>Google Slide</h2>
+            <div class="op">
+              <select id="circleSelect1" onchange="drawCircles1()">
+                <option value="1">LV 1-3</option>
+                <option value="2">LV 2-3</option>
+                <option value="3">LV 3-3</option>
+              </select>
+            </div>
+            <div id="circleContainer1">
+              <div class="circle02"></div>
+              <div class="circle02"></div>
+              <div class="circle02"></div>
+            </div>
+            <!-- select2 -->
+            <div class="thb"><p>THB 0</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="containerpay">
+        <h2 class="texth1">Order</h2>
+        <h2 class="texth2">info</h2>
+
+        <div class="dm02">
+          <img class="m02" src="image/c1.png" alt="" />
+        </div>
+
+        <p class="a1">Subtotal</p>
+        <p class="a2">THB</p>
+        <p class="a3">0</p>
+        <div><input type="text" placeholder="Promotion code" /></div>
+        <div><button class="btn">Apply</button></div>
+      </div>
+
+      <div class="containerpay1">
+        <p class="text1">Total</p>
+        <p class="text11">patment</p>
+        <h1 class="text2">THB</h1>
+        <h1 class="text3">0</h1>
+        <div><button class="btn01">LOG IN TO CHECKOUT</button></div>
+      </div>
+      <script>
+        function drawCircles() {
+          const selectValue = document.getElementById("circleSelect").value;
+          const circles = document.querySelectorAll(".circle");
+
+          circles.forEach((circle, index) => {
+            if (index < selectValue - 1) {
+              circle.style.backgroundColor = "green";
+            } else {
+              circle.style.backgroundColor = "gray";
+            }
+          });
+        }
+
+        drawCircles1();
+      </script>
+      <script>
+        function drawCircles1() {
+          const selectValue = document.getElementById("circleSelect1").value;
+          const circles = document.querySelectorAll(".circle1");
+
+          circles.forEach((circle1, index) => {
+            if (index < selectValue - 1) {
+              circle1.style.backgroundColor = "green";
+            } else {
+              circle1.style.backgroundColor = "gray";
+            }
+          });
+        }
+
+        drawCircles1();
+      </script>
+    </main>
+  </body>
+</html>
